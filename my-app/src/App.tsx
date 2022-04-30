@@ -58,7 +58,7 @@ function App() {
 
             </div>
 
-            <div className='hidden md:flex justify-center items-center h-screen w-screen bg-gray-800'>
+            <div className='hidden md:flex justify-center items-center h-screen w-screen bg-black'>
                 <div>
 
 
