@@ -32,7 +32,7 @@ function App() {
         const restminute = remaining % (60 * 1000)
         setsec(Math.floor(Math.floor(restminute / (1000))));
     }
-    const gradient = 'text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-bl from-green-200 via-green-300 to-blue-500';
+    const gradient = 'text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-red-700 to-rose-700';
 
     useEffect(() => {
         setInterval(function () {
@@ -43,7 +43,7 @@ function App() {
 
     return (
         <>
-            <div className='overflow-x-clip md:hidden p-2 bg-black max-h-screen h-screen'>
+            <div className='overflow-x-clip md:hidden p-4 bg-black max-h-screen h-screen'>
                 <div className='text-9xl font-semibold text-right text-white'>
 
                     <h1 className={gradient}>{days}</h1>
@@ -62,27 +62,31 @@ function App() {
                 <div>
 
 
-                    <div className='p-5 '>
-                        <div className='flex justify-around text-9xl font-sans tracking-wider font-extrabold text-white '>
+                    <div className='p-5 font-sans'>
+                        <div className='m-5'>
+                            <h1 className={gradient}>Staatsexamen</h1>
+                        </div>
+                        <div className='flex justify-between text-9xl font-sans tracking-wider font-extrabold text-white '>
                             <div>
                                 <h1 className={gradient}>{days}</h1>
                                 <p className='text-right pr-5 tracking-normal text-xl'>Tage</p>
                             </div>
-                            <div className={gradient}>:</div>
+                            <div className={gradient}>{" : "}</div>
                             <div>
                                 <h1 className={gradient}>{hours ? ("0" + hours).slice(-2) : "00"}</h1>
                                 <p className='text-right tracking-normal text-xl'>Stunden</p>
                             </div>
-                            <div className={gradient}>:</div>
+                            <div className={gradient}>{" : "}</div>
                             <div>
                                 <h1 className={gradient}>{minutes ? ("0" + minutes).slice(-2) : "00"}</h1>
                                 <p className='text-right justify-around tracking-normal text-xl'>Minuten</p>
                             </div>
-                            <div className={gradient}>:</div>
+                            <div className={gradient}>{" : "}</div>
                             <div>
                                 <h1 className={gradient}>{sec ? ("0" + sec).slice(-2) : "00"}</h1>
                                 <p className='text-right tracking-normal text-xl'>Sekunden</p>
                             </div>
+
                         </div >
                     </div>
                 </div >
