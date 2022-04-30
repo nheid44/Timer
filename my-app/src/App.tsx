@@ -32,9 +32,9 @@ function App() {
     return (
         <div className='flex justify-center items-center h-screen w-screen bg-gray-800'>
 
-            <div className='p-5 '>
-                <div className='flex md:justify-between md:text-9xl font-sans tracking-wider font-extrabold text-white '>
-                    <div>
+            <div className='md:p-5 '>
+                <div className='flex-row md:flex  justify-between md:text-9xl font-sans tracking-wider font-extrabold text-white '>
+                    <div className=''>
                         <h1>{days}</h1>
                         <p className='text-right pr-5 tracking-normal text-xl'>Tage</p>
                     </div>
