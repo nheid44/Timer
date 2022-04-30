@@ -32,7 +32,7 @@ function App() {
         const restminute = remaining % (60 * 1000)
         setsec(Math.floor(Math.floor(restminute / (1000))));
     }
-    const gradient = 'text-9xl font-extrabold text-transparent bg-clip-text' + ' bg-gradient-to-bl from-green-200 via-green-300 to-blue-500';
+    const gradient = 'text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-bl from-green-200 via-green-300 to-blue-500';
 
     useEffect(() => {
         setInterval(function () {
