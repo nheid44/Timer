@@ -43,7 +43,7 @@ function App() {
 
     return (
         <>
-            <div className='overflow-x-clip sm:hidden p-2 bg-black max-h-screen h-screen'>
+            <div className='overflow-x-clip md:hidden p-2 bg-black max-h-screen h-screen'>
                 <div className='text-9xl font-semibold text-right text-white'>
 
                     <h1 className={gradient}>{days}</h1>
