@@ -9,10 +9,10 @@ type IRemaining = {
 
 function App() {
 
-    const [remaingTime, setRemaingTime] = useState<IRemaining>(getTime());
+    const [date, setdate] = useState(Date.parse('August 9, 2022 08:00:00'.toLocaleString()));
+    const [remaingTime, setRemaingTime] = useState<IRemaining>(getTime(date));
 
-    function getTime() {
-        const date = Date.parse('August 9, 2022 08:00:00'.toLocaleString());
+    function getTime(date: number) {
         const start = Date.now();
         const remaining = date - start;
 
@@ -29,16 +29,18 @@ function App() {
 
         )
     }
-    const gradient = ' font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-red-700 to-rose-700';
+    const gradient = 'font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-pink-300 via-purple-300 to-indigo-400';
 
     useEffect(() => {
         setInterval(function () {
 
-            setRemaingTime(getTime())
+            setRemaingTime(getTime(date))
         }, 1000);
     }, []);
+
     return (
         <>
+            {/* Desktop */}
             <div className=' animate-fade-in-down overflow-x-clip md:hidden p-4 bg-black max-h-screen h-screen'>
                 <div className='text-9xl font-semibold text-right text-white'>
 
@@ -54,17 +56,26 @@ function App() {
                         <h1 className="float-left text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-red-700 to-rose-700">{"Staatsexamen"}</h1>
                         <p className='text-left text-base text-white'>
                             Medizin 2022
+                            <br />
+                            <button onClick={() => setdate(Date.parse('August 9, 2022 08:00:00'.toLocaleString()))}>
+
+                                August 9.
+                            </button>
+                            <br />
+                            <button onClick={() => setdate(Date.parse('August 11, 2022 08:00:00'.toLocaleString()))}>
+
+                                August 11.
+                            </button>
                         </p>
+
                     </div>
 
                 </div>
 
             </div>
-
+            {/* Mobile */}
             <div className='animate-fade-in-down hidden md:flex justify-center items-center h-screen w-screen bg-black'>
                 <div>
-
-
                     <div className='p-5 font-sans'>
                         <div className='m-5 text-9xl'>
                             <h1 className={gradient}>Staatsexamen</h1>
