@@ -29,7 +29,7 @@ function App() {
 
         )
     }
-    const gradient = 'font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-pink-300 via-purple-300 to-indigo-400';
+    const gradient = 'font-extrabold text-transparent bg-clip-text bg-gradient-to-t from-green-300 via-blue-500 to-purple-600';
 
     useEffect(() => {
         setInterval(function () {
